@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interprete Virtual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #333333;
+    }
+    #main-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    #chat-container {
+      width: 60%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    #chat-container h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #555555;
+    }
+    .message {
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      max-width: 80%;
+      line-height: 1.5;
+    }
+    .message.user {
+      background-color: #e1f5fe;
+      color: #0277bd;
+      margin-left: auto;
+    }
+    .message.bot {
+      background-color: #f1f1f1;
+      color: #555555;
+      margin-right: auto;
+    }
+    #avatar-container {
+      margin-left: 20px;
+      width: 300px;
+      text-align: center;
+    }
+    #avatar-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    #avatar-container button {
+      background-color: #0288d1;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #avatar-container button:hover {
+      background-color: #0277bd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>INTERPRETE VIRTUAL</h1>
+  </header>
+  <div id="main-container">
+    <!-- Chat container -->
+    <div id="chat-container">
+      <h2>Registros:</h2>
+      <div class="message bot">Boas Vindas</div>
+      <div class="message bot">Hoje vamos explorar novos conhecimentos juntos.</div>
+      <div class="message user">O que é informática?</div>
+      <div class="message bot">Vamos criar um documento no Google Docs sobre um tema legal.</div>
+    </div>
+    <!-- Avatar container -->
+    <div id="avatar-container">
+      <img src="/avatar-libras.png" alt="Avatar Libras">
+      <button>Iniciar Interpretação</button>
+    </div>
+  </div>
+  <!-- VLibras Widget Script -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>
